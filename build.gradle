@@ -1,0 +1,116 @@
+apply plugin: 'com.android.library'
+// apply plugin: 'com.mob.eclipsemodule'
+
+//android {
+//	defaultConfig {
+//		applicationId null
+//	}
+
+String findBuildTools() {
+    def localProperties = new File(rootProject.projectDir, "local.properties")
+    if (localProperties.exists()) {
+        def properties = new Properties()
+        localProperties.withInputStream {
+            instr->properties.load(instr)
+        }
+        def sdkDir = properties.getProperty('sdk.dir')
+        def buildTools = new File(sdkDir, "build-tools")
+        if (buildTools.exists()) {
+            def tools = buildTools.list()
+            if (tools != null) {
+                Arrays.sort(tools)
+                return tools[tools.length - 1]
+            }
+        }
+    }
+    return "25.0.2"
+}
+
+int findCompileSDK() {
+    def projProp = new File(projectDir, "project.properties")
+    if (projProp.exists()) {
+        def properties = new Properties()
+        projProp.withInputStream {
+            instr->properties.load(instr)
+        }
+        def target = properties.getProperty('target').trim()
+        def pref = "android-"
+        if (target != null && target.startsWith(pref)) {
+            try {
+                return Integer.parseInt(target.substring(pref.length()))
+            } catch (Throwable t) {}
+        }
+    }
+    return 16
+}
+
+android {
+    compileSdkVersion findCompileSDK()
+    buildToolsVersion findBuildTools()
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion findCompileSDK()
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    sourceSets.main {
+        manifest.srcFile 'AndroidManifest.xml'
+        assets.srcDirs = ['assets']
+        java.srcDirs = ['src']
+        aidl.srcDirs = ['src']
+        res.srcDirs = ['res']
+        jniLibs.srcDirs = ['libs']
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
+
+
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task makeJar(type: Copy) {
+    delete 'build/libs/MobTools.jar'
+    from('build/intermediates/bundles/debug/')
+    into('build/libs/')
+    include('classes.jar')
+    rename ('classes.jar', 'MobTools.jar')
+}
+
+makeJar.dependsOn(build)
