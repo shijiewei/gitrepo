@@ -1,10 +1,22 @@
 apply plugin: 'com.android.library'
 // apply plugin: 'com.mob.eclipsemodule'
-
-//android {
-//	defaultConfig {
-//		applicationId null
+//apply plugin: 'com.mob.pcp'
+//
+//pcp {
+//	defines {
+//		lang = "cn"
+//		commit = true
+//		pure_version = false
+//		sdk.debugable = false
+//		sdk.jar.name = "MobCommons"
+//		mobsdk.version.int = 1
+//		mobsdk.version.name = "1.0.0"
 //	}
+//}
+
+//dependencies {
+//	compile project(":MobTools")
+//}
 
 String findBuildTools() {
     def localProperties = new File(rootProject.projectDir, "local.properties")
@@ -37,11 +49,11 @@ int findCompileSDK() {
         def pref = "android-"
         if (target != null && target.startsWith(pref)) {
             try {
-                return Integer.parseInt(target.substring(pref.length()))
+                GlobalVariables.compileSdkVersion = Integer.parseInt(target.substring(pref.length()))
             } catch (Throwable t) {}
         }
     }
-    return 16
+    return 21
 }
 
 android {
@@ -56,7 +68,7 @@ android {
     }
 
     sourceSets.main {
-        manifest.srcFile 'AndroidManifest.xml'
+		manifest.srcFile 'AndroidManifest.xml'
         assets.srcDirs = ['assets']
         java.srcDirs = ['src']
         aidl.srcDirs = ['src']
@@ -67,6 +79,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -82,9 +95,13 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    Project mobTools = findProject(':MobTools')
+    if (null != mobTools) {
+        compile mobTools
+    } else {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+    }
 }
-
 
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -106,11 +123,11 @@ allprojects {
 }
 
 task makeJar(type: Copy) {
-    delete 'build/libs/MobTools.jar'
+    delete 'build/libs/MobCommons.jar'
     from('build/intermediates/bundles/debug/')
     into('build/libs/')
     include('classes.jar')
-    rename ('classes.jar', 'MobTools.jar')
+    rename ('classes.jar', 'MobCommons.jar')
 }
 
 makeJar.dependsOn(build)
