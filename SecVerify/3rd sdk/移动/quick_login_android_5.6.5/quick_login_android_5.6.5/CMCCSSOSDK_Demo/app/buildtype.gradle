@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    buildTypes {
+        release {
+            buildConfigField 'String', "APP_ID", "\"300011580392\""
+            buildConfigField 'String', "APP_KEY", "\"894C9B429372943D1CBECC86F0C237A3\""
+            buildConfigField 'String', "HTTP_BASE_URL", "\"https://www.cmpassport.com/unisdk/rsapi/loginTokenValidate\""
+        }
+        release_debugable {
+            buildConfigField 'String', "APP_ID", "\"300011580392\""
+            buildConfigField 'String', "APP_KEY", "\"894C9B429372943D1CBECC86F0C237A3\""
+            buildConfigField 'String', "HTTP_BASE_URL", "\"https://www.cmpassport.com/unisdk/rsapi/loginTokenValidate\""
+        }
+        debug {
+            buildConfigField 'String', "APP_ID", "\"10000001\""
+            buildConfigField 'String', "APP_KEY", "\"B50BBEF6C4CD4FA8\""
+            buildConfigField 'String', "HTTP_BASE_URL", "\"https://www.cmpassport.com/unisdk-debug/rsapi/loginTokenValidate\""
+        }
+        hangyan {
+            buildConfigField 'String', "APP_ID", "\"10000001\""
+            buildConfigField 'String', "APP_KEY", "\"B50BBEF6C4CD4FA8\""
+            buildConfigField 'String', "HTTP_BASE_URL", "\"https://www.cmpassport.com/unisdk/rsapi/loginTokenValidate\""
+        }
+        gray {
+            buildConfigField 'String', "APP_ID", "\"300005687666\""
+            buildConfigField 'String', "APP_KEY", "\"0EB92FA2E7E1A2C57B5CAEF5023A44C2\""
+            buildConfigField 'String', "HTTP_BASE_URL", "\"https://www.cmpassport.com/unisdk-test/rsapi/loginTokenValidate\""
+        }
+        local {
+            buildConfigField 'String', "APP_ID", "\"10000008\""
+            buildConfigField 'String', "APP_KEY", "\"B50BBEF6C4CD4FA8\""
+            buildConfigField 'String', "HTTP_BASE_URL", "\"http://120.197.235.102:8080/rs/unisdk/rsapi/loginTokenValidate\""
+        }
+    }
+
+}

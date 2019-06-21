@@ -1,0 +1,10 @@
+com.sdk.base.api
+com.sdk.base.framework.bean
+com.sdk.base.module.manager
+com.sdk.mobile.handler
+com.sdk.mobile.manager.login
+com.sdk.mobile.manager.login.ctc
+com.sdk.mobile.manager.login.cucc
+com.sdk.mobile.manager.login.views
+com.sdk.mobile.manager.oauth.ctc
+com.sdk.mobile.manager.oauth.cucc

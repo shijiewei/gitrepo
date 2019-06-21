@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog1"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog2"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog3"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog4"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog5"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog6"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog7"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog8"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog9"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog10"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog11"
+        android:duration="100"/>    
+    <item
+        android:drawable="@mipmap/oauth_loading_dialog12"
+        android:duration="100"/>            
+</animation-list>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries_private_sms">
+        <item>我正在开会，一会联系你</item>
+        <item>我在路上，晚些联系你</item>
+        <item>我现在不方便，稍后回电话</item>
+        <item>我马上就到</item>
+    </string-array>
+    <color name="black">#000000</color>
+    <color name="blue">#0090ff</color>
+    <color name="blue_ctc">#01bdd5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="efefef">#ffffff</color>
+    <color name="gray">#787676</color>
+    <color name="red">#cc000a</color>
+    <color name="translucent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <string name="action_settings">Settings</string>
+    <string name="active_block_mode">当前模式：</string>
+    <string name="anonymous_number">匿名号码</string>
+    <string name="app_name">ZzxSDKProvider</string>
+    <string name="block_all">全部拦截</string>
+    <string name="block_by_blacklist">只拦截黑名单</string>
+    <string name="block_by_contacts">只接受通讯录</string>
+    <string name="block_by_custom_rule">自定义模式</string>
+    <string name="block_by_default_rule">标准模式</string>
+    <string name="block_by_whitelist">只接受白名单</string>
+    <string name="block_fake_basestation">疑似伪基站</string>
+    <string name="block_filter_date">[年月日]</string>
+    <string name="block_reason_all">拦截模式-全部拦截</string>
+    <string name="block_reason_area">按地区拦截</string>
+    <string name="block_reason_blacklist">黑名单号码</string>
+    <string name="block_reason_cloud_marker">按标记云拦截</string>
+    <string name="block_reason_cloud_ringonce">云拦截响一声</string>
+    <string name="block_reason_contact">通讯录号码</string>
+    <string name="block_reason_contains_keyword">智能云拦截</string>
+    <string name="block_reason_fake_base_station">疑似伪基站</string>
+    <string name="block_reason_hidenumber">隐藏号码</string>
+    <string name="block_reason_highly_suspected_fraud">伪装号码</string>
+    <string name="block_reason_local_marker">按标记拦截</string>
+    <string name="block_reason_none_contact">拦截模式-只接受通讯录</string>
+    <string name="block_reason_none_white">拦截模式-只接受白名单</string>
+    <string name="block_reason_none_white_contact">拦截模式-非白名单、联系人号码</string>
+    <string name="block_reason_normal_ringonce">响一声</string>
+    <string name="block_reason_public_black_number">黑号码</string>
+    <string name="block_reason_reported_msg">已举报信息</string>
+    <string name="block_reason_smart">智能拦截</string>
+    <string name="block_reason_stranger_mms">彩信智能拦截</string>
+    <string name="block_reason_stranger_number">陌生人号码</string>
+    <string name="block_reason_url_check_dangerous">包含危险网址</string>
+    <string name="block_reason_url_check_risky">包含可疑网址</string>
+    <string name="block_reason_wappush">WAP PUSH智能拦截</string>
+    <string name="call_show_display_type_short_number_enterprise">集团短号</string>
+    <string name="call_show_display_type_short_number_family">亲情短号</string>
+    <string name="call_show_mark_little">"有&lt;font color='#1eff00'>%1$s&lt;/font>人标记为"</string>
+    <string name="call_show_mark_more">"超&lt;font color='#1eff00'>%1$s万&lt;/font>人标记"</string>
+    <string name="captcha">验证码</string>
+    <string name="cheat_call">诈骗电话</string>
+    <string name="collision_lite_version_toast">检测到卫士精简版冲突！暂时关闭骚扰拦截功能</string>
+    <string name="collision_mobilesafe_version_toast">检测到卫士冲突！暂时关闭骚扰拦截功能</string>
+    <string name="custom_blacklist">黑名单</string>
+    <string name="custom_ip_header">其他IP号码</string>
+    <string name="disturb_call">骚扰电话</string>
+    <string name="download">断点下载</string>
+    <string name="estate_agent">房产中介</string>
+    <string name="express">快递送餐</string>
+    <string name="fetion_number">飞信号码</string>
+    <string name="flashsms">闪信</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hint_txt">登录即同意</string>
+    <string name="intercept">拦截</string>
+    <string name="ip_call">IP拨号</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="loading">请稍后…</string>
+    <string name="main_notify_cloud_ring_once">"云拦截响一声:&lt;font color='#ff6c00'>%1$s&lt;/font>"</string>
+    <string name="main_notify_ring_once">"检测到响一声:&lt;font color='#ff6c00'>%1$s&lt;/font>"</string>
+    <string name="marker_type_finance">保险理财</string>
+    <string name="marker_type_recruit">招聘猎头</string>
+    <string name="marker_type_taxi">出租车</string>
+    <string name="miscall">漏话</string>
+    <string name="mobile">取号</string>
+    <string name="more">加载中</string>
+    <string name="no_data">暂无数据</string>
+    <string name="notify_title_unread_blocked_call">"拦截到来电:&lt;font color='#ff6c00'>%1$s&lt;/font>"</string>
+    <string name="notify_title_unread_blocked_message">"拦截到信息:&lt;font color='#ff6c00'>%1$s&lt;/font>"</string>
+    <string name="notify_title_web_push_message">"拦截到新&lt;font color='#ff6c00'>wap 推送信息&lt;/font>"</string>
+    <string name="oauth">认证</string>
+    <string name="oauth_login">一键登录</string>
+    <string name="oauth_title">免密登录</string>
+    <string name="other_login">其他方式登录</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="reality_show_captcha">captcha</string>
+    <string name="release_to_refresh">松开刷新</string>
+    <string name="replace_special_chars">1234567890123456789123456789123456789123456789123456789</string>
+    <string name="resim">二次卡</string>
+    <string name="service_and_privacy">中国联通认证服务协议</string>
+    <string name="service_and_privacy_ctc">中国电信认证服务协议</string>
+    <string name="service_name">手机认证服务由中国联通提供</string>
+    <string name="service_name_ctc">手机认证服务由中国电信提供</string>
+    <string name="short_time_ring">响一声</string>
+    <string name="spam_call">广告推销</string>
+    <string name="special_chars">一二三四五六七八九零壹贰叁肆伍陆柒捌玖⑴⑵⑶⑷⑸⑹⑺⑻⑼①②③④⑤⑥⑦⑧⑨㈠㈡㈢㈣㈤㈥㈦㈧㈨⒈⒉⒊⒋⒌⒍⒎⒏⒐</string>
+    <string name="ussd">USSD</string>
+    <string name="vsim">视频卡</string>
+    <string name="wap_push_danger_content">360卫士提醒：危险服务信息</string>
+    <string name="wap_push_message_header">WAP 推送</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        
+    </style>
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        
+        <item name="android:background">@null</item>
+        <item name="android:colorBackground">@null</item>
+    </style>
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+</resources>
